@@ -1,0 +1,878 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Buat Variabel color buat diakses sepanjang web*/
+:root {
+    --navbar-color: #000;
+    --title-color: #ffff;
+    --primary-color: #F3F1F5;
+    --secondary-color: #343A40;
+    --support-color: #BE9FE1;
+    --card-color: #343A40;
+}
+
+.dark-theme {
+    --navbar-color: #ffff;
+    --title-color: #000;
+    --primary-color: #5C5470;
+    --secondary-color: #352F44;
+    --support-color: #FBCFFC;
+    --card-color: #F3F1F5;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* RESPONSIVE */
+/* Tablet (lebar layar 600px - 992px) */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .judul {
+        text-align: center;
+    }
+
+    .about-desc {
+        text-align: center;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .menu-items {
+        display: inline-block;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .content-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Perangkat Seluler (lebar layar kurang dari 600px) */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .judul {
+        text-align: center;
+    }
+
+    .about-desc {
+        text-align: center;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .menu-items {
+        display: inline-block;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .content-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .judul {
+        text-align: center;
+    }
+
+    .about-desc {
+        text-align: center;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .menu-items {
+        display: inline-block;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .content-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+main {
+    background-color: var(--primary-color);
+}
+
+/* Navigator bar */
+.navbar {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: var(--navbar-color);
+    padding: 10px 16px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.logo .img {
+    width: 85px;
+}
+
+#icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+/* pergantian warna saat kursor diatasnya */
+.menu-items a:hover {
+    background-color: var(--support-color);
+}
+
+/* Body */
+
+/* Home */
+.home {
+    margin: 10px 44px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 90vh;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+
+.judul h1 {
+    font-size: 33px;
+    color: var(--secondary-color);
+}
+
+.judul h1 span {
+    color: var(--support-color);
+}
+
+.judul h3 {
+
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+.judul-button-adoption {
+    padding: 15px 25px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.judul-button-donation {
+    padding: 15px 25px;
+    background-color: var(--support-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change the button color on hover */
+.judul-button-adoption:hover {
+    background-color: var(--support-color);
+    /* New background color on hover */
+}
+
+.judul-button-donation:hover {
+    background-color: var(--secondary-color);
+    /* New background color on hover */
+    color: var(--primary-color);
+
+}
+
+/* Content */
+.content {
+    min-height: 500px;
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    padding-top: 10px;
+}
+
+
+.content-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.content h1 {
+    color: var(--secondary-color);
+}
+
+.content h4 {
+    color: var(--secondary-color);
+    letter-spacing: 5px;
+}
+
+.content-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: var(--card-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.card .btn {
+    margin-top: 20px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #C9B6E4;
+    color: #C9B6E4;
+    background-color: transparent;
+    appearance: none;
+    transition: all .3s ease-in-out;
+    display: none;
+
+}
+
+.btn:hover {
+    background-color: #BE9FE1;
+    color: white;
+    border: 2px solid #BE9FE1;
+
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.0;
+}
+
+.card-img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15%;
+    overflow: hidden;
+    border: #DFCCFB solid 5px;
+}
+
+.card-img img {
+    width: 150px;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*CONTACT US  */
+.contact-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: var(--primary-color);
+    /* Mengubah warna latar belakang sesuai dengan gaya */
+}
+
+.container-form {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--support-color);
+    /* Mengubah warna latar belakang formulir sesuai dengan gaya */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container-form h1 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.container-form p {
+    text-align: center;
+    color: var(--title-color);
+}
+
+.container-form form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--title-color);
+    /* Ubah warna label sesuai dengan gaya */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    padding: 5px;
+
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+
+    /* Ubah warna tombol Submit */
+    color: var(--support-color);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-send input[type="submit"]:hover {
+    background-color: var(--support-color);
+    /* Ubah warna tombol Submit saat dihover */
+    color: var(--navbar-color);
+}
+
+
+.form {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.form h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.form p {
+    margin: 5px 0;
+}
+
+.form strong {
+    font-weight: bold;
+}
+
+/* Gaya untuk gambar */
+.form img {
+    max-width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Login  */
+.login-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: var(--primary-color);
+    /* Mengubah warna latar belakang sesuai dengan gaya */
+}
+
+.container-form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--support-color);
+    /* Mengubah warna latar belakang formulir sesuai dengan gaya */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container-form h1 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.container-form p {
+    text-align: center;
+    color: var(--title-color);
+}
+
+.container-form form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--title-color);
+    /* Ubah warna label sesuai dengan gaya */
+}
+
+input[type="text"],
+input[type="password" i] 
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+input[type="checkbox"]
+{
+    margin-right: 5px;
+    color: var(--title-color);
+}
+
+.button-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DASHBOARD */
+.dash-main {
+    width: auto;
+    margin: 16px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: var(--support-color);
+}
+
+.leading-btn {
+    text-align: end;
+}
+
+.add-btn {
+    background-color: var(--support-color);
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--title-color);
+    margin-right: 3%;
+}
+
+.add-btn:hover {
+    background-color: var(--secondary-color);
+    /* New background color on hover */
+    color: var(--primary-color);
+}
+
+.edit-btn {
+    background-color: var(--support-color);
+    padding: 8px;
+    margin-right: 30px;
+    border: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: var(--support-color);
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+.edit-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+.delete-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+h2 {
+    text-align: center;
+    color: var(--support-color);
+    margin-top: 5px;
+}
+
+.content-kucing {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: var(--card-color);
+    cursor: pointer;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-kucing:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kucing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kucing img {
+    max-width: 60%;
+    height: 50%;
+    border-radius: 15%;
+    overflow: hidden;
+    border: #DFCCFB solid 5px;
+}
+
+.kucing h2 {
+    color: var(--support-color);
+    margin: 0; 
+}
+
+.kucing h3 {
+    color:var(--title-color);
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.kucing p {
+    color: var(--title-color);
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
+/* add content */
+.add-content {
+    height: 110vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-form-container {
+    background-color: var(--support-color);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.add-form-container h1 {
+    text-align: center;
+}
+
+.add-form-container hr {
+    border: 2px solid var(--card-color);
+    margin-bottom: 24px;
+}
+
+.add-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+textarea {
+    width: 100%;
+    max-height: 150px; /* Sesuaikan tinggi maksimum sesuai kebutuhan Anda */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+}
+
+
+.textfield {
+    width: 300px;
+    margin-block: 8px;
+    padding: 12px;
+    border: 1px solid #ABABAB; 
+    border-radius: 4px;
+}
+
+.textfield:focus {
+    border: 1px solid transparent;
+    outline: 1.5px solid var(--secondary-color);
+}
+
+.content-card h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.content-card p{
+    margin: auto;
+    font-size: 10px;
+}
+
+.content-card h2{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.cat-wrapped{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* UPDATE KUCING */
+.update-content {
+    height: 110vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-form-container {
+    background-color: var(--support-color);
+    padding: 50px; /* Sesuaikan dengan padding yang sama seperti pada halaman "add.php" */
+    border-radius: 15px;
+    max-width: 400px; /* Sesuaikan dengan lebar yang Anda inginkan */
+    margin: 0 auto;
+}
+
+.update-form-container h1 {
+    text-align: center;
+}
+
+.update-form-container hr {
+    border: 2px solid var(--card-color);
+    margin-bottom: 24px;
+}
+
+.update-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-form-container input[type="text"],
+.update-form-container input[type="number"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.update-form-container input[type="text"]:focus,
+.update-form-container input[type="number"]:focus,
+.update-form-container input[type="file"]:focus {
+    border: 1px solid transparent;
+    outline: 1.5px solid var(--secondary-color);
+}
+
+input[type="submit" i] {
+    background-color: var(--primary-color);
+    color: var(--support-color);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px; /* Menambahkan margin atas tombol */
+}
+
+/* Jika ada elemen khusus pada halaman "update.php" yang perlu ditambahkan, Anda dapat menambahkannya di sini. */
+
+
+/* About Us */
+.about-us {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.about-desc {
+    color: var(--title-color);
+}
+
+.about-desc h1 {
+    color: var(--support-color);
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Gaya untuk teks hitam */
+.black-text {
+    color: var(--title-color);
+}
+
+/* Footer */
+.site-footer {
+    height: 20vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content ul {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    padding: 0 15px;
+    color: var(--navbar-color);
+    font-weight: lighter;
+    font-weight: bold;
+    transition: .4s;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 16px;
+
+}
+
+.footer-content li {
+    display: inline;
+    padding: 15px 0px;
+}
+
+.footer-content a:hover {
+    box-shadow: 0 2px 0 var(--secondary-color);
+}
+
+
+/* OUTPUT */
